@@ -1,5 +1,6 @@
 body {
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header, main, footer {
@@ -19,11 +20,16 @@ header, footer {
 header img {
     float: right;
     width: auto;
-    height: 230px;
+    height: 200px;
     margin: auto;
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 #6d6d6d;
 }
+
+h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
 @media screen {
 
 }
