@@ -1,0 +1,22 @@
+@media only screen and (max-width: 32.5em) {
+    header img {
+        width: auto;
+        height: 150px;
+        float: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    header, footer {
+        border-radius: 0;
+    }
+
+    h1 h2 {
+        font-size: medium;
+    }
+
+    body {
+        font-size: small;
+        text-align: center;
+    }
+}
