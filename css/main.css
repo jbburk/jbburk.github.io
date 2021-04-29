@@ -1,8 +1,14 @@
+* { -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/* body rules go here */
 body {
+    font-family: 'Montserrat', Verdana, sans-serif;
     font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
 }
 
+/* header rules go here */
 header, main, footer {
     max-width: 760px;
     margin: 0 auto;
@@ -28,4 +34,9 @@ header img {
 
 h1, h2, h3 {
     font-family: 'Libre Baskerville', serif;
-}
+} 
+/* navigation rules go here */
+
+/* main rules go here */
+
+/* footer rules go here */
