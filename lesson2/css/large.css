@@ -1,0 +1,12 @@
+@media only screen and (min-width: 1024px) {
+    main.column {grid-template-columns: 1fr 1fr 1fr;}
+
+    header, footer, nav, main {max-width: 75rem; margin: auto;}
+    
+    /* nav ul li {flex-basis: auto; padding: 0 2%;} */
+    
+
+    main figure {width: 31%;}
+
+
+} /* media query ends here */
