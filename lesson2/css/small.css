@@ -31,16 +31,16 @@
     nav a:hover {background-color: #444;} */
     
     /* main rules here */
-    main {padding: 1rem 2%; display:block;}
-    main h1 {color: #17a8e4;}
+    main div {padding: 1rem 2%; display:block;}
+    main div h1 {color: #17a8e4;}
     main.column {
         display: grid;
         grid-template-columns: 1fr;
     }
     main.column div {border: 1px grey solid;}
-    main figure img {width: 100%}
-    main figure {width: 100%; margin:0;}
-    main figcaption {text-align: center; font-size: .8rem;}
+    main div figure img {width: 100%}
+    main div figure {width: 100%; margin:0;}
+    main div figcaption {text-align: center; font-size: .8rem;}
     
     /* footer rules here */
     footer {
