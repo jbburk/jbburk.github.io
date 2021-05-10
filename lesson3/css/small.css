@@ -50,7 +50,7 @@ nav ul li a:hover {
 }
 nav ul li.active a {
     background-color: #12aede;
-    color: #fff;
+    color: #000;
 }
 /*----------- MAIN --------------*/
 main {
