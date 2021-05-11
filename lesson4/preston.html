@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Fill Me In" />
+    <meta name="author" content="Joshua Burk" />
+
+    <title>Home: Rainy Day Weather</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLE SHEETS -->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div id="headerWrapper">
+      <header class="clearfix">
+        <img src="images/logo.png" alt="Company Logo" />
+        <div class="headings">
+          <h1>Rainy Day Weather</h1>
+          <h2>Here for your weather needs</h2>
+        </div>
+      </header>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div id="navWrapper">
+      <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="primarynav" class="hide">
+          <li class="active"><a href="preston.html">Home</a></li>
+          <li><a href="#">Preston</a></li>
+          <li><a href="#">Soda Springs</a></li>
+          <li><a href="#">Fish Haven</a></li>
+          <li><a href="#">Storm Center</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- CONTENT -->
+    <main>
+      <h1>Preston</h1>
+      <section>Hero and weather summary will go here</section>
+      <section>5-day weather forcast will go here</section>
+      <section>Article and related image will go here</section>
+      <section>Contact Us with this address and map will be here</section>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footerWrapper">
+      <footer>
+        &copy;<span id="year"></span> | Joshua Burk | 
+        <span id="date"></span>
+      </footer>
+      <script src="js/main.js"></script>
+    </div>
+  </body>
+</html>
