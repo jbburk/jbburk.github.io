@@ -112,10 +112,38 @@ main {
     display: grid;
 }
 
-main picture img {
-    min-width: 50px;
-    min-height: 50px;
-    padding: 1rem;
+main div.gallery {
+    display:block ;
+    align-items: center;
+    margin: 0rem;
+    padding: 0px;
+    width: 100%;
+}
+div.resize {
+    float:left;
+    width: 100%;
+    margin: 0rem;
+    padding: 1rem 0;
+}
+
+div.gallery figure{
+    margin: 0rem;
+    text-align: center;
+    border: 1px solid #777;
+}
+
+div.gallery figure:hover {
+    box-shadow: 0 0 30px #333;
+}
+
+div.gallery figure img {
+    width: 100%;
+    filter:blur(0);
+    transition: filter 2s;
+}
+
+div.gallery figure img[data-src] {
+    filter:blur(0.2em);
 }
 
 div#message {

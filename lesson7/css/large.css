@@ -26,6 +26,10 @@
         font-size: 1.25rem;
     }
 
+    div.resize {
+        width: 33%;
+    }
+
 
     /*----------- FOOTER --------------*/
 

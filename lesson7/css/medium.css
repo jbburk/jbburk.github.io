@@ -44,6 +44,16 @@
         font-size: 1.3rem;
     }
 
+    div.resize {
+        width: 49%;
+        margin: 0;
+        padding: .5rem;
+    }
+
+    /* div.gallery figure img {
+        width: 400px;
+    } */
+
     .weathersummary {
         top: 1.5rem;
         left: 1rem;
