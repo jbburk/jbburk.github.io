@@ -145,6 +145,14 @@ div.gallery figure img {
 div.gallery figure img[data-src] {
     filter:blur(0.2em);
 }
+main picture img {
+    filter: blur(0);
+    transition: filter 2s;
+}
+
+main picture img[data-src] {
+    filter:blur(0.2em)
+}
 
 div#message {
     background-color: yellow;
