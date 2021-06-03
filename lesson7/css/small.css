@@ -1,0 +1,232 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*----------- BODY --------------*/
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', Verdana, sans-serif;
+}
+
+body h1,
+h2,
+h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+/*----------- HEADER --------------*/
+div#headerWrapper {
+    background-color: #bebebe;
+}
+
+header {
+    padding: .5rem 2%;
+    background-color: #bebebe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+header img {
+    margin-right: 10px;
+    width: 50px;
+}
+div.headings {
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+header h2 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/*----------- NAVIGATION --------------*/
+div#navWrapper {
+    background-color: #1226DE;
+}
+
+nav {
+    background-color: #1226DE;
+}
+
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #eee;
+}
+
+nav ul.hide {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: #eee;
+    padding: .8rem 2%;
+    text-decoration: none;
+    text-align: center;
+    border-top: 1px solid #bebebe;
+}
+
+
+nav ul li a:hover {
+    background-color: #8512de;
+    color: #fff;
+}
+
+nav ul li.active a {
+    background-color: #12aede;
+    color: #000;
+    border: 1px solid #333;
+}
+
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+    display: grid;
+}
+
+main picture img {
+    min-width: 50px;
+    min-height: 50px;
+    padding: 1rem;
+}
+
+div#message {
+    background-color: yellow;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+div.showme {display: block;}
+div.hideme {display: none;}
+div.fivedayforecast {display:none}
+
+.herodiv {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* border: 1px dashed red; */
+}
+
+.hero-ph {
+    margin: 10px auto;
+    background-color: #eee;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 30px #333;
+}
+
+.weathersummary {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    background-color: #eee;
+    opacity: .75;
+    border: 1px solid #333;
+    padding: 0 .5rem ;
+    margin: .5rem 0;
+    box-shadow: 0 0 30px #777;
+    border-radius: 1rem;
+    font-size: .9rem;
+}
+
+section.article div img {
+    width: 100%;
+}
+
+section.article {
+    margin: 1rem;
+    border: 1px solid #333;
+    padding: .5rem 1rem;
+    background-color: #bebebe;
+    border-radius: 1rem;
+}
+
+div.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 120px 1fr;
+    margin: auto;    
+}
+
+div.contact h2 {
+    grid-row: 1;
+    grid-column: span 2;
+}
+
+div.contact div h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+div.contact div p {
+    font-size: 14px;
+    margin: 0;
+    padding: 2px;
+}
+
+div.contact div.address {
+    margin: auto;
+    grid-row: 2;
+}
+
+div.contact div.info {
+    margin: auto;
+    grid-row: 2;
+}
+
+div.contact img {
+    margin: 1rem 0;
+    padding:0;
+    background-color: #333;
+    border-radius: 1rem;
+    width: 100%;
+    grid-column: span 2;
+}
+
+/*----------- FOOTER --------------*/
+div#footerWrapper {
+    background-color: #bebebe;
+}
+
+footer {
+    background-color: #bebebe;
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
