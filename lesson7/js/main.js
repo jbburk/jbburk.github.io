@@ -16,6 +16,7 @@ if (new Date().getDay() == 5){
   document.getElementById("message").classList.toggle("hideme");
 }
 
+let today = new Date();
 
 // set current day of week in footer
 document.querySelector("#date").textContent = curday();
@@ -98,3 +99,19 @@ function curday() {
   return weekDay + day + month + year;
 }
 
+
+document.querySelector("#days").textContent = 
+getNumberOfDays(document.lastModified, today);
+
+function getNumberOfDays(start, end) {
+  const date1 = new Date(start);
+  const date2 = new Date(end);
+
+  const oneDay = 1000*60*60*24;
+
+  const diffInTime = date2.getTime() - date1.getTime();
+
+  const diffInDays = Math.round(diffInTime/oneDay);
+
+  return diffInDays + " days since last visit";
+}
