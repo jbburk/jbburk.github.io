@@ -99,7 +99,8 @@ function curday() {
   return weekDay + day + month + year;
 }
 
-
+// Days since last visit
+// Try window.history
 document.querySelector("#days").textContent = 
 getNumberOfDays(document.lastModified, today);
 

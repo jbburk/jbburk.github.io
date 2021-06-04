@@ -7,6 +7,8 @@ const loadImages = (image) => {
     };
 };
 
+
+// Start of IntersectionObserver
 const options = {
     rootMargin: '0px 0px -200px 0px',
     threshold: 0
