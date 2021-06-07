@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="This is the Preston Town page for weather services" />
+  <meta name="author" content="Joshua Burk" />
+
+  <title>Home: Rainy Day Weather</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <link rel="shortcut icon" href="images/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap"
+    rel="stylesheet" />
+
+  <!-- STYLE SHEETS -->
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/small.css" rel="stylesheet" />
+  <link href="css/medium.css" rel="stylesheet" />
+  <link href="css/large.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div id="message" class="">
+    Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city
+    park pavilion.
+  </div>
+  <div id="headerWrapper">
+    <header class="clearfix">
+      <img src="images/logo.png" alt="Company Logo" />
+      <div class="headings">
+        <h1>Rainy Day Weather</h1>
+        <h2>Here for your weather needs</h2>
+      </div>
+    </header>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div id="navWrapper">
+    <nav class="clearfix">
+      <button onclick="toggleMenu()">&#9776; Menu</button>
+      <ul id="primarynav" class="hide">
+        <li><a href="#">Home</a></li>
+        <li><a href="preston6.html">Preston</a></li>
+        <li><a href="#">Soda Springs</a></li>
+        <li><a href="#">Fish Haven</a></li>
+        <li><a href="#">Storm Center</a></li>
+        <li class="active"><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- CONTENT -->
+  <main>
+    <div class="gallery">
+      <h1>Weather Gallery</h1>
+      <div class="resize">
+      <figure>
+        <img src="images/placeholder.jpg" 
+        data-src="images/weather (1).jpg" 
+        alt="Weather Photo" />
+        <figcaption>Rain Storm</figcaption>
+      </figure>
+    </div>
+    <div class="resize">
+      <figure>
+        <img src="images/placeholder.jpg" 
+        data-src="images/weather (2).jpg" 
+        alt="Weather Photo" />
+        <figcaption>Clouds Over Hills</figcaption>
+      </figure>
+    </div>
+    <div class="resize">
+      <figure>
+        <img src="images/placeholder.jpg" 
+        data-src="images/weather (3).jpg" 
+        alt="Weather Photo" />
+        <figcaption>Calm Waters</figcaption>
+      </figure>
+    </div>
+    <div class="resize">
+      <figure>
+        <img src="images/placeholder.jpg" 
+        data-src="images/weather (4).jpg" 
+        alt="Weather Photo" />
+        <figcaption>Clouds Over Water</figcaption>
+      </figure>
+    </div>
+    <div class="resize">
+      <figure>
+        <img src="images/placeholder.jpg" 
+        data-src="images/weather (5).jpg" 
+        alt="Weather Photo" />
+        <figcaption>Late Afternoon Clouds</figcaption>
+      </figure>
+    </div>
+    <div class="resize">
+      <figure>
+        <img src="images/placeholder.jpg" 
+        data-src="images/weather (6).jpg" 
+        alt="Weather Photo" />
+        <figcaption>Alpine Clouds</figcaption>
+      </figure>
+    </div>
+    <div class="resize">
+      <figure>
+        <img src="images/placeholder.jpg" 
+        data-src="images/weather (7).jpg" 
+        alt="Weather Photo" />
+        <figcaption>Evening Lightning</figcaption>
+      </figure>
+    </div>
+    <div class="resize">
+      <figure>
+        <img src="images/placeholder.jpg" 
+        data-src="images/weather (8).jpg" 
+        alt="Weather Photo" />
+        <figcaption>Morning Fog</figcaption>
+      </figure>
+    </div>
+    <div class="resize">
+      <figure>
+        <img src="images/placeholder.jpg" 
+        data-src="images/weather (9).jpg" 
+        alt="Weather Photo" />
+        <figcaption>Mountain Fog</figcaption>
+      </figure>
+    </div>
+        
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footerWrapper">
+    <footer>
+      &copy;<span id="year"></span> | Joshua Burk |
+      <span id="date"></span> | <span id="days"></span>
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/imagehandling.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Libre Baskerville", "Montserrat"],
+      },
+    });
+  </script>
+</body>
+
+</html>
