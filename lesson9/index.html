@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is the Home Page for Rainy Day Weather Services" />
+    <meta name="author" content="Joshua Burk" />
+
+    <title>Home: Rainy Day Weather</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap"
+        rel="stylesheet" />
+
+    <!-- STYLE SHEETS -->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="message" class="">
+        Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city
+        park pavilion.
+    </div>
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <img src="images/logo.png" alt="Company Logo" />
+            <div class="headings">
+                <h1>Rainy Day Weather</h1>
+                <h2>Here for your weather needs</h2>
+            </div>
+        </header>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+            <ul id="primarynav" class="hide">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="preston6.html">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- CONTENT -->
+    <main>
+        <div class="herodiv">
+            <h1>Home Page</h1>
+            <img class="hero-ph" src="images/old-hero.jpg" alt="Home Hero Image" sizes="100vw" srcset=" 
+              images/hero500.jpg 500w, 
+              images/hero800.jpg 800w, 
+              images/hero1100.jpg 1100w" />
+        </div>
+        <div>
+            <h1>Current Events</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo esse voluptas, reiciendis aliquam vel
+                ratione quos, fugit consequuntur nostrum obcaecati incidunt odit perspiciatis eos, dolorum cumque soluta
+                optio rerum. Error!
+                Vel magni commodi ut aliquam excepturi ab quos. Animi, earum beatae illum suscipit, odio dolorem
+                voluptates recusandae molestias voluptas aspernatur laboriosam delectus quidem. Esse, iusto fugit quae
+                dicta officiis sed?</p>
+        </div>
+
+        <article id="home-section">
+        </article>
+
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <div class="address">
+                <h4>Address:</h4>
+                <p>Rainy Day Weather
+                    123 Main Street.
+                    Flushing, MI 87654</p>
+            </div>
+            <div class="info">
+                <h4>Phone:</h4>
+                <p>(801) 555-1234</p>
+                <h4>Email:</h4>
+                <p>contact@rainydayweather.com</p>
+            </div>
+            <img src="images/map.png" alt="Map of Town" />
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footerWrapper">
+        <footer>
+            &copy;<span id="year"></span> | Joshua Burk | <span id="date"></span> |
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ["Libre Baskerville", "Montserrat"],
+            },
+        });
+    </script>
+</body>
+
+</html>

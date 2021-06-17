@@ -1,0 +1,386 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*----------- BODY --------------*/
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', Verdana, sans-serif;
+}
+
+body h1,
+h2,
+h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+/*----------- HEADER --------------*/
+div#headerWrapper {
+    background-color: #bebebe;
+}
+
+header {
+    padding: .5rem 2%;
+    background-color: #bebebe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header img {
+    margin-right: 10px;
+    width: 50px;
+}
+
+div.headings {
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+header h2 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/*----------- NAVIGATION --------------*/
+div#navWrapper {
+    background-color: lightblue;
+}
+
+nav {
+    background-color: lightblue;
+}
+
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+nav ul.hide {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: black;
+    padding: .8rem 2%;
+    text-decoration: none;
+    text-align: center;
+    border-top: 1px solid #bebebe;
+}
+
+
+nav ul li a:hover {
+    background-color: lightcoral;
+    color: black;
+}
+
+nav ul li.active a {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+/*----------- MAIN --------------*/
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+    display: grid;
+}
+
+main div.gallery {
+    display: block;
+    align-items: center;
+    margin: 0rem;
+    padding: 0px;
+    width: 100%;
+}
+
+div.resize {
+    float: left;
+    width: 100%;
+    margin: 0rem;
+    padding: 1rem 0;
+}
+
+div.gallery figure {
+    margin: 0rem;
+    text-align: center;
+    border: 1px solid #777;
+}
+
+div.gallery figure:hover {
+    box-shadow: 0 0 30px #333;
+}
+
+div.gallery figure img {
+    width: 100%;
+    filter: blur(0);
+    transition: filter 2s;
+}
+
+div.gallery figure img[data-src] {
+    filter: blur(0.2em);
+}
+
+main picture img {
+    filter: blur(0);
+    transition: filter 2s;
+}
+
+main picture img[data-src] {
+    filter: blur(0.2em)
+}
+
+div#message {
+    background-color: lightcoral;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+div.showme {
+    display: block;
+}
+
+div.hideme {
+    display: none;
+}
+
+div.fivedayforecast {
+    display: none
+}
+
+.herodiv {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* border: 1px dashed red; */
+}
+
+.hero-ph {
+    margin: 10px auto;
+    background-color: #eee;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 30px #333;
+}
+
+.weathersummary {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    background-color: #eee;
+    opacity: .75;
+    border: 1px solid #333;
+    padding: 0 .5rem;
+    margin: .5rem 0;
+    box-shadow: 0 0 30px #777;
+    border-radius: 1rem;
+    font-size: .9rem;
+}
+
+#home-section {
+    background-color: lightblue;
+    padding: 1rem;
+}
+
+#home-section div {
+    /* border: dashed 1px #F00;  */
+    padding: 1rem;
+}
+
+#home-section div section {
+    background-color: lightcoral; 
+    text-align: center;
+}
+
+#home-section div section h2 {
+    margin: 0; 
+    color: black;
+    padding-top: .5rem;
+}
+
+#home-section div section h3 {
+    margin:0;
+    color: black; 
+    font-weight: normal;
+    padding-top: .5rem;
+}
+
+#home-section div figure {
+    margin: 0; width: 100%;
+}
+
+#home-section div figure img {
+    width: 100%; height: auto;
+}
+
+section.article {
+    margin: 1rem;
+    border: 1px solid #333;
+    padding: .5rem 1rem;
+    background-color: #bebebe;
+    border-radius: 1rem;
+}
+
+div.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 120px 1fr;
+    margin: auto;
+}
+
+div.contact h2 {
+    grid-row: 1;
+    grid-column: span 2;
+}
+
+div.contact div h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+div.contact div p {
+    font-size: 14px;
+    margin: 0;
+    padding: 2px;
+}
+
+div.contact div.address {
+    margin: auto;
+    grid-row: 2;
+}
+
+div.contact div.info {
+    margin: auto;
+    grid-row: 2;
+}
+
+div.contact img {
+    margin: 1rem 0;
+    padding: 0;
+    background-color: #333;
+    border-radius: 1rem;
+    width: 100%;
+    grid-column: span 2;
+}
+
+/* ----------- FORM ------------- */
+
+form fieldset {
+    width: 100%;
+    margin: 2rem 0;
+    border: 2px solid #1226DE;
+    border-radius: 10px;
+    padding: .5rem 2%;
+    background-color: #eee;
+}
+
+form legend {
+    color: #1226DE;
+    margin: 0 1rem;
+    padding: 0 .5rem;
+}
+
+form label.top,
+form div {
+    display: block;
+    padding-top: 1rem;
+    color: red;
+    font-size: .8rem;
+}
+
+form label.top input,
+form label.top select {
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 20rem;
+    background-color: rgba (0, 0, 0, 0.1);
+}
+
+form label.sbs {
+    display: block;
+    padding: 0.75rem;
+    color: #555;
+}
+
+.flexly {
+    display: flex;
+    align-items: center;
+    padding: .75rem;
+    margin: 0 0 2rem 2%;
+}
+
+form textarea {
+    width: 75%;
+}
+
+form input.submit8tn {
+    border: none;
+    background-color: #9c2c13;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 96%;
+    max-width: 20rem;
+}
+
+form label.top input:required {
+    border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+}
+
+/*----------- FOOTER --------------*/
+div#footerWrapper {
+    background-color: #bebebe;
+}
+
+footer {
+    background-color: #bebebe;
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
