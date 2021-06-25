@@ -122,7 +122,7 @@ main div.gallery {
 }
 
 div.resize {
-    float: left;
+    float: left; 
     width: 100%;
     margin: 0rem;
     padding: 1rem 0;
@@ -158,8 +158,8 @@ main picture img[data-src] {
 }
 
 div#message {
-    background-color: lightcoral;
-    margin: 0 auto;
+    background-color: lightblue;
+    margin: auto;
     padding: 1rem;
     font-size: 1rem;
     font-weight: bold;
@@ -275,7 +275,6 @@ div.fivedayforecast {
 }
 
 .contact div p {
-    font-size: auto;
     margin: 0;
     padding: 0 0 .8rem 0;
 }
@@ -335,7 +334,7 @@ form label.top select {
     color: #333;
     width: 100%;
     max-width: 20rem;
-    background-color: rgba (0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 form label.sbs {
