@@ -1,0 +1,171 @@
+/* 35em is also 560px (if basefont is 16px) */
+@media only screen and (min-width: 43rem) {
+
+
+    /*----------- BODY --------------*/
+    body {
+        font-size: 1rem;
+    }
+
+    /*----------- HEADER --------------*/
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header h2 {
+        font-size: 2rem; 
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    /*----------- NAVIGATION --------------*/
+
+    nav ul li {
+        float: left;
+    }
+
+    nav ul li a {
+        padding: .5rem 1rem;
+        border-top: none;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    nav ul.hide {
+        display: block;
+    }
+
+    /*----------- MAIN --------------*/
+    div#message {
+        font-size: 1.3rem;
+    }
+
+    div.resize {
+        width: 49%;
+        margin: 0;
+        padding: .5rem;
+    }
+
+    /* div.gallery figure img {
+        width: 400px;
+    } */
+
+    .weathersummary {
+        top: 2rem;
+        left: 1.5rem;
+        margin: 0;
+        padding: 0 .5rem;
+        /* font-size: .8rem; */
+    }
+
+    
+    div.fivedayforecast {
+        display: block; 
+        text-align: center;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    div section.forecast{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: none;
+        align-content: center;
+    }
+
+    section.forecast div { 
+        text-align: center;
+        border: 1px solid #333;
+        margin: 0 1rem;
+        background-color: #bebebe;
+        border-radius: 1rem;
+        box-shadow: 0 0 30px #777;
+    }
+
+    section.forecast div img {
+        width: auto;
+        height: auto;
+
+    }
+
+    section.forecast div h5 {
+        background-color: lightcoral;
+        margin: 0;
+        padding: 1rem 0;
+        font-size: 1rem;
+        border-bottom: 1px solid #333;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    section.article div{
+        display: inline-block;
+    }
+
+    section.article div img {
+        float: right;
+        width: 40%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    #home-section div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #home-section div:nth-child(2) figure {
+        grid-column: 1; grid-row: 1;
+    }
+
+    #home-section div:nth-child(2) section {
+        grid-column: 2;
+    }
+
+    div.contact {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 80px 1fr;
+        margin:  1rem 0;
+        padding: 1rem 0;
+    }
+
+    .contact div h4 {
+        font-size: 1rem;
+        margin: 0;
+        padding: 1rem 0;
+    }
+    
+    .contact div p {
+        font-size: 1rem;
+        padding-bottom: .5rem 0;
+        margin: 0;
+    }
+    .contact .address {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .contact .info {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .contact img {
+        display:grid;
+        grid-column: 3;
+        grid-row: 2;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        background-color: lightcoral;
+        padding: .2rem;
+    }
+
+    /*----------- FOOTER --------------*/
+
+}
+
+/* end of media query */
