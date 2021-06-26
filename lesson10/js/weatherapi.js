@@ -3,6 +3,7 @@
 
 
 //ADD the key and change units to imperial
+// const cityid = document.getElementById('city').textContent
 const cityid = "5604473";
 const APPID = "489ff7b5249aae895e1644595f955153";
 const weatherURL = `//api.openweathermap.org/data/2.5/weather?id=${cityid}&appid=${APPID}&units=imperial`;

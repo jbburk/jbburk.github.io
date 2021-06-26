@@ -112,3 +112,21 @@ s.textContent = sel.value;
 
 }
 
+// Last Visited function
+
+function lastVisit() {
+  let mostRecent = localStorage.getItem("date");
+if (!mostRecent) {
+  mostRecent = new Date();
+}
+
+let parsed = Date.parse(mostRecent);
+let days = getNumberOfDays(parsed, new Date().getTime());
+document.getElementById("lastDate").innerHTML = days;
+localStorage.setItem("date", new Date());
+
+function getNumberOfDays(start, end) {
+  const oneDay = 1000 * 60 * 60 * 24;
+  let diffInDays = (end - start) / oneDay;
+  return Math.round(diffInDays);
+}};
