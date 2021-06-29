@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="This is the Soda Springs town page for town events weather services" />
+  <meta name="author" content="Joshua Burk" />
+
+  <title>Soda Springs: Rainy Day Weather</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <link rel="shortcut icon" href="images/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap"
+    rel="stylesheet" />
+
+  <!-- STYLE SHEETS -->
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/small.css" rel="stylesheet" />
+  <link href="css/medium.css" rel="stylesheet" />
+  <link href="css/large.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div id="message" class="">Saturday = Preston Pancakes in the Park! 9:00 a.m. 
+    Saturday at the city park pavilion.
+  </div>
+  <div id="headerWrapper">
+    <header class="clearfix">
+      <img src="images/logo.png" alt="Company Logo" />
+      <div class="headings">
+        <h1>Rainy Day Weather</h1>
+        <h2>Here for your weather needs</h2>
+      </div>
+    </header>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div id="navWrapper">
+    <nav class="clearfix">
+      <button onclick="toggleMenu()">&#9776; Menu</button>
+      <ul id="primarynav" class="hide">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="preston.html">Preston</a></li>
+        <li class="active"><a href="soda-springs.html">Soda Springs</a></li>
+        <li><a href="fish-haven.html">Fish Haven</a></li>
+        <li><a href="storm-center.html">Storm Center</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- CONTENT -->
+  <main>
+    <h1 id="city">Soda Springs</h1>
+    <div class="herodiv"> 
+      <img class="hero-ph" src="images/hero.jpg" 
+        alt="Preston" sizes="100vw" srcset=" 
+        images/hero500.jpg 500w, 
+        images/hero800.jpg 800w, 
+        images/hero1100.jpg 1100w" />
+        <!-- Weather Summary -->
+      <section class="weathersummary">
+        <h3>Weather Summary</h3>
+        <p>Currently: <span id="currentstate"></span></p>
+        <p>High: <span id="currentTemp"></span>&deg;F</p>
+        <p>Humidity: <span id="humidity"></span> &percnt;</p>
+        <p>Wind: <span id="windSpeed"></span> mph</p>
+        <p>Wind Chill: <span id="windChill"></span></p>
+      </section>
+    </div>
+
+    <div class="fivedayforecast">
+      <h2>Five Day Forecast</h2>
+      <section class="forecast">
+        <div>
+          <h5><span id="dayofweek1"></span></h5>
+          <img id="icon1" src=""  alt="">
+          <p><span id="forecast1"></span>&deg;F</p>
+        </div>
+        <div>
+          <h5><span id="dayofweek2"></span></h5>
+          <img id="icon2" src=""  alt="">
+          <p><span id="forecast2"></span>&deg;F</p>
+        </div>
+        <div>
+          <h5><span id="dayofweek3"></span></h5>
+          <img id="icon3" src=""  alt="">
+          <p><span id="forecast3"></span>&deg;F</p>
+        </div>
+        <div>
+          <h5><span id="dayofweek4"></span></h5>
+          <img id="icon4" src=""  alt="">
+          <p><span id="forecast4"></span>&deg;F</p>
+        </div>
+        <div>
+          <h5><span id="dayofweek5"></span></h5>
+          <img id="icon5" src=""  alt="">
+          <p><span id="forecast5"></span>&deg;F</p>
+        </div>
+      </section>
+    </div>
+    
+    <section class="article">
+      <h2>Article Title</h2>
+      <div>
+        <img src="images/article.jpg" alt="Related photo" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+          commodi qui molestiae veritatis deleniti fugit nihil rem accusantium
+          omnis facilis ipsum corporis quam repellendus provident adipisci
+          dolores reprehenderit dicta illo. Saepe ipsa, quod quo magnam dicta
+          delectus corporis soluta maiores debitis amet placeat fugiat numquam
+          ad nobis impedit tenetur consequatur ducimus at quibusdam, nostrum eos
+          veniam illo ut! Sed, quos! Illo possimus alias nesciunt adipisci id
+          laborum ut distinctio iusto dicta ipsam quasi, laudantium officiis
+          eius optio ab dolorem voluptas numquam harum saepe rem! Consequatur
+          quia porro quasi ad totam? Omnis eligendi voluptates tenetur
+          consequuntur obcaecati magnam quis et officia debitis animi, tempore
+          quos nostrum dolore provident quisquam beatae aspernatur quidem quod
+          suscipit molestias facere veniam perspiciatis expedita. Quidem,
+          nostrum.
+        </p>
+      </div>
+    </section>
+    
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <div class="address">
+        <h4>Address:</h4>
+        <p>Rainy Day Weather
+           123 Main Street. 
+           Flushing, MI 87654</p>
+      </div>
+      <div class="info">
+        <h4>Phone:</h4>
+        <p>(801) 555-1234</p>
+        <h4>Email:</h4>
+        <p>contact@rainydayweather.com</p>
+      </div>
+      <img src="images/map.png" alt="Map of Town"/>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footerWrapper">
+    <footer>
+      &copy;<span id="year"></span> | Joshua Burk |
+      <span id="date"></span>
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/windchill.js"></script>
+  <script src="js/weatherapi.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: [
+            'Libre Baskerville',
+            'Montserrat'
+          ]
+        }
+      });
+    </script>
+</body>
+
+</html>
