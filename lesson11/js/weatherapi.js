@@ -1,11 +1,11 @@
 // If statement chooses the cityid
 var cityid = ""
 
-if (document.getElementById("city").textContent == "Preston"){
+if (document.getElementById("page").textContent == "Preston"){
    cityid = "5604473";
-} else if (document.getElementById("city").textContent == "Soda Springs"){
+} else if (document.getElementById("page").textContent == "Soda Springs"){
    cityid = "5607916";
-} else if (document.getElementById("city").textContent == "Fish Haven"){
+} else if (document.getElementById("page").textContent == "Fish Haven"){
    cityid = "5585000";
 };
 
@@ -20,16 +20,16 @@ const forecastURL = `//api.openweathermap.org/data/2.5/forecast?id=${cityid}&app
 fetch(forecastURL)
   .then((response) => response.json())
   .then((forecastinfo) => {
-    console.log(forecastinfo);
+   //  console.log(forecastinfo);
     let day = 0;
     const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     // reduce the list array to the five forecasts
     const fiveDayForecast = forecastinfo.list.filter( forecast => forecast.dt_txt.includes('18:00:00'));
-    console.log(fiveDayForecast)
+   //  console.log(fiveDayForecast)
 
     fiveDayForecast.forEach( x => {
         let d = new Date(x.dt_txt);
-        console.log(d);
+      //   console.log(d);
         const desc = x.weather[0].description;
         const iconcode = x.weather[0].icon;
         const icon_path = `//openweathermap.org/img/wn/${iconcode}.png`;
@@ -45,8 +45,7 @@ fetch(forecastURL)
 fetch(weatherURL)
   .then((response) => response.json())
   .then((weatherinfo) => {
-    //Once it comes back, display it to the console.
-    console.log(weatherinfo);
+   //  console.log(weatherinfo);
     document.getElementById('currentstate').innerHTML = weatherinfo.weather[0].main;
     document.getElementById('currentTemp').innerHTML = Math.round(weatherinfo.main.temp);
     document.getElementById('humidity').innerHTML = weatherinfo.main.humidity;
