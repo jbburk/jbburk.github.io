@@ -190,6 +190,7 @@ div.fivedayforecast {
     background-color: lightcoral;
     width: 100%;
     height: auto;
+    min-height: 242px;
     box-shadow: 0 0 30px #333;
     border-radius: 1rem;
 }
@@ -201,7 +202,7 @@ div.fivedayforecast {
     background-color: lightblue;
     opacity: .75;
     /* border: 1px solid #333; */
-    padding: .5rem 0;
+    padding: 0;
     margin: .5rem 0;
     box-shadow: 0 0 30px #333;
     border-radius: 1rem;
@@ -255,6 +256,17 @@ div.fivedayforecast {
 .article img {
     width: 100%;
     height: auto;
+}
+
+#townevent {
+    width: auto;
+    margin: 1rem 0;
+    border: 1px solid #333;
+    padding: .5rem 1rem;
+    background-color: lightblue;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .contact {
