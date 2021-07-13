@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is the Business Directory for the Lake Geneva Chamber of Commerce" />
+    <meta name="author" content="Joshua Burk" />
+
+    <title>Directory: Lake Geneva Chamber of Commerce</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- STYLE SHEETS -->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="message" class="">
+        Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city
+        park pavilion.
+    </div>
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <img src="images/logo.png" alt="Chamber of Commerce Logo" />
+            <div class="headings">
+                <h1>Lake Geneva</h1>
+                <h2>Chamber of Commerce</h2>
+            </div>
+        </header>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+            <ul id="primarynav" class="hide">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="city.html">Lake Geneva</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li class="active"><a href="directory.html">Directory</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!-- social media links (x2) -->
+    </div>
+
+    <!-- CONTENT -->
+    <main>
+       
+
+        <!-- Company Advertisments-->
+        <div class="advertdiv">
+
+        </div>
+            
+        <!-- Contact information -->
+        <div class="contact">
+
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <div id="footerWrapper">
+        <footer>
+            &copy;<span id="year"></span> | Joshua Burk | <span id="date"></span> 
+        </footer>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ["Libre Baskerville", "Montserrat"],
+            },
+        });
+    </script>
+</body>
+
+</html>

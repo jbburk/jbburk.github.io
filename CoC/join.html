@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is the New Member Application Page for the Lake Geneva Chamber of Commerce" />
+    <meta name="author" content="Joshua Burk" />
+
+    <title>Join: Lake Geneva Chamber of Commerce</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- STYLE SHEETS -->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <img src="images/logo.png" alt="Chamber of Commerce Logo" />
+            <div class="headings">
+                <h1>Lake Geneva</h1>
+                <h2>Chamber of Commerce</h2>
+            </div>
+        </header>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+            <ul id="primarynav" class="hide">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="city.html">Lake Geneva</a></li>
+                <li class="active"><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!-- social media links (x2) -->
+    </div>
+
+    <!-- CONTENT -->
+    <main>
+        <h1>New Member Application</h1>
+      <form method="get" action="thanks.html">
+        <fieldset>
+          <legend>Applicant Information</legend>
+          <label class="top"
+            >First Name* <input
+              type="text"
+              name="fname"
+              required
+              minlength="3"
+              pattern="[A-Za-z]{3}"
+          /></label>
+          <label class="top"
+            >Last Name* <input
+              type="text"
+              name="lname"
+              required
+              minlength="3"
+              pattern="[A-Za-z]{3, }"
+          /></label>
+          <label class="top"
+            >Title <input
+              type="text"
+              name="title"
+              placeholder="CEO"
+              pattern="[A-Za-z]"
+          /></label>
+          <label class="top"
+            >Email* <input
+              type="email"
+              name="email"
+              required
+              placeholder="someone@gmail.com"
+          /></label>
+          <label class="top"
+            >Phone <input
+              type="tel"
+              name="phone"
+              placeholder="1235551234"
+          /></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Business Application</legend>
+            <label class="top">
+                Business Name* <input
+                    type="text"
+                    name="businessname"
+                    required
+                    pattern="[A-Za-z]"
+                />
+            </label>
+            <label class="top">
+                Business Address <input
+                type="text"
+                name="businessaddress"
+                />
+            </label>
+            <label class="top">
+                Business Website <input
+                type="url"
+                name="businessurl"
+                placeholder="YourBusiness.com"
+                />
+            </label>
+            <div>Business Description</div>
+          <label class="top">
+            <textarea name="addtext" rows="4"></textarea>
+          </label>
+          
+        </fieldset>
+        <fieldset>
+            <legend>Membership Selection</legend>
+            <div class="membership">
+            <label class="top">
+                <input type="radio" name="level" value="Non-Profit"> Non-Profit - $100
+            </label>
+            <label class="top">
+                <input type="radio" name="level" value="Bronze"> Bronze - $200
+            </label>
+            <label class="top">
+                <input type="radio" name="level" value="Silver"> Silver - $400
+            </label>
+            <label class="top">
+                <input type="radio" name="level" value="Gold"> Gold - $1000
+            </label>
+            <div class="perks">
+                <h2>Membership Levels</h1>
+                <h3>Non-Profit - $100</h2>
+                <ul>
+                    <li>New addition to our Annual Community Resource Guide (Membership Directory)</li>
+                    <li>Marketing and public relations exposure on our website and Facebook page</li>
+                    <li>Subcription to Chamber Newsletter</li>
+                </ul>
+                <h3>Bronze - $200</h2>
+                <ul>
+                    <p>All previous benefits included plus:</p>
+                    <li>Bronze member sponserhip events and advertisement placement</li>
+                    <li>2 months of Chamber sponsered business training and seminars</li>
+                </ul>
+                <h3>Silver - $400</h2>
+                <ul>
+                    <p>All previous benefits included plus:</p>
+                    <li>Silver member sponsership events and advertisement placement</li>
+                    <li>4 months of Chamber sponsered business training and seminars</li>
+                </ul>
+                <h3>Gold - $1000</h2>
+                <ul>
+                    <p>All previous benefits included plus:</p>
+                    <li>Gold member sponsership events and advertisement placement</li>
+                    <li>1 year of Chamber sponsered business training and seminars</li>
+                </ul>
+            </div>
+          </div>
+        </fieldset>
+          <br />
+          <input type="submit" value="Join the Chamber" class="submit8tn" />
+      </form>
+
+    </main>
+    <!-- FOOTER -->
+    <div id="footerWrapper">
+        <footer>
+            &copy;<span id="year"></span> | Joshua Burk | <span id="date"></span> 
+        </footer>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ["Libre Baskerville", "Montserrat"],
+            },
+        });
+    </script>
+</body>
+
+</html>
