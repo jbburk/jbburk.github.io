@@ -11,10 +11,9 @@ html {
     box-sizing: border-box;
 }
 
-/*----------- BODY ----------------------------------------------------------*/
-/* Slideshow container */
+/*----------- Slideshow Container --------------------------------------------*/
 .slideshow-container {
-    width: 90%;
+    width: 100%;
     position: relative;
     margin: auto;
   }
@@ -83,7 +82,7 @@ html {
     transition: background-color 0.6s ease;
   }
   
-  .active, .dot:hover {
+  .activeImage, .dot:hover {
     background-color: #717171;
   }
   
@@ -104,6 +103,9 @@ html {
     from {opacity: .4}
     to {opacity: 1}
   }
+
+/*----------- BODY ----------------------------------------------------------*/
+
 /*----------- HEADER --------------------------------------------------------*/
 
 /*----------- NAVIGATION ----------------------------------------------------*/
