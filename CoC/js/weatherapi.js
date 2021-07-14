@@ -8,26 +8,39 @@ var part = "minutely,hourly";
 const APPID = "489ff7b5249aae895e1644595f955153";
 const onecallURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${APPID}&units=imperial`;
 
-//Fetch request for Weather Information
+//Fetch request for Three Day Weather Forcast
 fetch(onecallURL)
   .then((response) => response.json())
   .then((weatherinfo) => {
-    console.log(weatherinfo);
+    // console.log(weatherinfo);
     let day = 0;
     const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const threeDayForecast = weatherinfo.list.filter()
+    const threeDayForecast = weatherinfo.daily;
+    console.log(threeDayForecast)
 
+    threeDayForecast.forEach( x => {
+        let d = new Date(x.dt);
+        console.log(d);
+        const desc = x.weather[0].description;
+        const iconcode = x.weather[0].icon;
+        const icon_path = `//openweathermap.org/img/wn/${iconcode}.png`;
+        document.getElementById(`dayofweek${day+1}`).textContent = dayofWeek[d.getDay()];
+        document.getElementById(`icon${day+1}`).src = icon_path;
+        document.getElementById(`icon${day+1}`).setAttribute('alt', desc)
+        document.getElementById(`forecast${day+1}`).textContent = Math.round(x.temp.day);
+        day++;
+    });
   });
 
-// //Fetch request for Weather Information
-// fetch(forecastURL)
+// //Fetch request for Current Weather
+// fetch(onecallURL)
 //   .then((response) => response.json())
-//   .then((forecastinfo) => {
-//    //  console.log(forecastinfo);
+//   .then((weatherinfo) => {
+//     console.log(weatherinfo);
 //     let day = 0;
 //     const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 //     // reduce the list array to the five forecasts
-//     const fiveDayForecast = forecastinfo.list.filter( forecast => forecast.dt_txt.includes('18:00:00'));
+//     const fiveDayForecast = weatherinfo.list.filter( forecast => forecast.dt_txt.includes('18:00:00'));
 //    //  console.log(fiveDayForecast)
 
 //     fiveDayForecast.forEach( x => {
@@ -44,8 +57,8 @@ fetch(onecallURL)
 //     });
 // });
 
-// //Fetch request for Weather Information
-// fetch(weatherURL)
+// //Fetch request for Weather Alerts
+// fetch(onecallURL)
 //   .then((response) => response.json())
 //   .then((weatherinfo) => {
 //    //  console.log(weatherinfo);

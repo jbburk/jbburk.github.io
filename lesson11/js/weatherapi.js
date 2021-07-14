@@ -20,12 +20,12 @@ const forecastURL = `//api.openweathermap.org/data/2.5/forecast?id=${cityid}&app
 fetch(forecastURL)
   .then((response) => response.json())
   .then((forecastinfo) => {
-   //  console.log(forecastinfo);
+    console.log(forecastinfo);
     let day = 0;
     const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     // reduce the list array to the five forecasts
     const fiveDayForecast = forecastinfo.list.filter( forecast => forecast.dt_txt.includes('18:00:00'));
-   //  console.log(fiveDayForecast)
+    console.log(fiveDayForecast)
 
     fiveDayForecast.forEach( x => {
         let d = new Date(x.dt_txt);
