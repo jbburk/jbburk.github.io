@@ -14,7 +14,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
 
     <!-- STYLE SHEETS -->
     <link href="css/normalize.css" rel="stylesheet" />
@@ -62,35 +62,26 @@
             <h1 id="page">Home</h1>
             <!-- Full-width images with number and caption text -->
             <div class="slideshow-container">
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">1 / 3</div>
-                    <img src="images/hero.jpg" alt="Home Image 1" sizes="100vw" srcset=" 
-                    images/hero500.jpg 500w, 
-                    images/hero800.jpg 800w, 
-                    images/hero1100.jpg 1100w" />
-                <div class="text">Caption Text</div>
+                    <img src="images/sailing_2.jpg" style="width:100%"/>
+                    <div class="text">Caption Text</div>
                 </div>
 
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">2 / 3</div>
-                    <img src="images/hero.jpg" alt="Home Image 2" sizes="100vw" srcset=" 
-                    images/hero500.jpg 500w, 
-                    images/hero800.jpg 800w, 
-                    images/hero1100.jpg 1100w" />
-                <div class="text">Caption Text</div>
+                    <img src="images/lake-geneva.jpg" style="width:100%"/>
+                    <div class="text">Caption Text</div>
                 </div>
 
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">3 / 3</div>
-                    <img src="images/hero.jpg" alt="Home Image 3" sizes="100vw" srcset=" 
-                    images/hero500.jpg 500w, 
-                    images/hero800.jpg 800w, 
-                    images/hero1100.jpg 1100w" />
-                <div class="text">Caption Text</div>
+                    <img src="images/lake-geneva_2.jpg" style="width:100%"/>
+                    <div class="text">Caption Text</div>
                 </div>
                 <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-                <a class="next" onclick="plusSlides(1)">&#10095</a>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <br>
             <!-- The dots under photo -->
@@ -100,6 +91,17 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
+
+        <!-- upcoming events area -->
+        <section class="eventWrapper">
+            <div>
+               <h2>Upcoming Events</h2>
+               <hr>
+               <p>August 14th - 15th: Art in the Park</p>
+               <p>August 18th - 22nd: Venetian Festival</p>
+               <p>September 1st - 6th: Walworth County Fair</p>
+            </div>
+        </section>
 
         <!-- Company Advertisments-->
         <div class="advertdiv">
@@ -111,14 +113,9 @@
             <!-- description of the purpose of the chamber and its goals -->
 
         </div>
-            
+
         <!-- Contact information -->
         <div class="contact">
-
-        </div>
-        
-        <!-- upcoming events area -->
-        <div class="events">
 
         </div>
 
@@ -141,11 +138,12 @@
     <!-- FOOTER -->
     <div id="footerWrapper">
         <footer>
-            &copy;<span id="year"></span> | Joshua Burk | <span id="date"></span> 
+            &copy;<span id="year"></span> | Joshua Burk | <span id="date"></span>
         </footer>
     </div>
     <!-- JAVASCRIPT -->
     <script src="js/main.js"></script>
+    <script>src="js/images.js"</script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
         WebFont.load({
