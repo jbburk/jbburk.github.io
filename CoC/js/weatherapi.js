@@ -13,7 +13,7 @@ fetch(onecallURL)
   .then((response) => response.json())
   .then((weatherinfo) => {
     // console.log(weatherinfo);
-    let day = 0;
+    let Day = 0;
     const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const threeDayForecast = weatherinfo.daily;
     console.log(threeDayForecast)
@@ -24,11 +24,11 @@ fetch(onecallURL)
         const desc = x.weather[0].description;
         const iconcode = x.weather[0].icon;
         const icon_path = `//openweathermap.org/img/wn/${iconcode}.png`;
-        document.getElementById(`dayofweek${day+1}`).textContent = dayofWeek[d.getDay()];
-        document.getElementById(`icon${day+1}`).src = icon_path;
-        document.getElementById(`icon${day+1}`).setAttribute('alt', desc)
-        document.getElementById(`forecast${day+1}`).textContent = Math.round(x.temp.day);
-        day++;
+        document.getElementById(`dayofweek${Day+1}`).textContent = dayofWeek[d.getDay()];
+        document.getElementById(`icon${Day+1}`).src = icon_path;
+        document.getElementById(`icon${Day+1}`).setAttribute('alt', desc)
+        document.getElementById(`forecast${Day+1}`).textContent = Math.round(x.temp.day);
+        Day++;
     });
   });
 
