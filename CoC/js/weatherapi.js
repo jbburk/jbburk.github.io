@@ -18,7 +18,7 @@ fetch(onecallURL)
     const threeDayForecast = weatherinfo.daily;
     console.log(threeDayForecast)
 
-    threeDayForecast.forEach( x => {
+    threeDayForecast.slice(0, 3).forEach( x => {
         let d = new Date(x.dt);
         console.log(d);
         const desc = x.weather[0].description;
