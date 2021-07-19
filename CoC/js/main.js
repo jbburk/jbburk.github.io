@@ -7,16 +7,21 @@ function toggleMenu() {
   document.getElementById("primarynav").classList.toggle("hide");
 }
 
-// displays message on Fridays
-if (new Date().getDay() == 5){
-  console.log(document.getElementById("message").classList);
-  document.getElementById("message").classList.toggle("showme");
-} else {
-  console.log(document.getElementById("message").classList);
-  document.getElementById("message").classList.toggle("hideme");
+// Button click
+document.getElementById("calltojoin").onclick = function () {
+  location.href = "https://jbburk.github.io/CoC/join.html"
 }
 
-let today = new Date();
+// displays message on Fridays
+// if (new Date().getDay() == 5){
+//   console.log(document.getElementById("message").classList);
+//   document.getElementById("message").classList.toggle("showme");
+// } else {
+//   console.log(document.getElementById("message").classList);
+//   document.getElementById("message").classList.toggle("hideme");
+// }
+
+// let today = new Date();
 
 // set current day of week in footer
 document.querySelector("#date").textContent = curday();

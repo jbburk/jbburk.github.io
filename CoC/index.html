@@ -26,10 +26,6 @@
 
 <body>
     <!-- HEADER -->
-    <div id="message" class="">
-        Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city
-        park pavilion.
-    </div>
     <div id="headerWrapper">
         <header class="clearfix">
             <img src="images/logo.png" alt="Chamber of Commerce Logo" />
@@ -92,6 +88,19 @@
             </div>
         </div>
 
+        <!-- description of the purpose of the chamber and its goals -->
+        <section class="article">
+            <h2>Article Title</h2>
+            <figure><img src="images/spring.jpg" alt="related photo" width="350px"></figure>
+            <article>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae doloremque a atque eum, rerum error excepturi totam nisi, cum adipisci esse quae, consectetur animi accusamus odit. Officiis, amet! Aspernatur, voluptate.
+            Quos odio consequuntur, quisquam placeat quis accusantium molestias! Incidunt esse veniam illo quisquam numquam id ipsam culpa ipsa nihil magni! Accusantium nostrum hic quisquam, unde quibusdam molestiae reprehenderit officia minima?
+            Aliquam accusamus hic modi aspernatur accusantium ab. Distinctio error commodi voluptas sequi vitae dolorem itaque quibusdam expedita, aperiam nesciunt accusantium fuga nulla, ex maxime dicta impedit repellendus odio neque exercitationem!
+            Fuga magnam, voluptatum dolores maxime cumque ex, tenetur accusantium deserunt iusto, eveniet delectus pariatur repellendus corporis cum quaerat necessitatibus earum deleniti consequatur! Tenetur laborum, officia sunt aliquam repudiandae et dolorem?
+            Quis nulla quidem laboriosam eveniet, quas adipisci consequatur labore blanditiis sequi deleniti obcaecati facilis fuga est pariatur animi suscipit ipsum sapiente in veritatis. Doloribus hic magni nostrum nobis dignissimos reiciendis.
+            </article>
+        </section>
+
         <!-- upcoming events area -->
         <section class="eventWrapper">
             <div>
@@ -104,24 +113,28 @@
         </section>
 
         <!-- Company Advertisments-->
-        <div class="advertdiv">
-
+        <div class="advertWrapper">
+            <div class="advert">
+                <h3>Next Door Pub & Pizzaria</h3>
+                <a href="https://www.nextdoorpub.com" target="_blank">https://www.nextdoorpub.com</a>
+                <figure><img src="images/pub-logo.png" alt="Business Logo" width="300px"></figure>
+                
+            </div>
+            <div class="advert">
+                <h3>Popeye's on Lake Geneva</h3>
+                <a href="https://www.popeyeslkg.com" target="_blank">https://www.popeyeslkg.com</a>
+                <figure><img src="images/popeyes-logo.png" alt="Business Logo" width="300px"></figure>
+            </div>
+            <div class="advert">
+                <h3>Gino's East</h3>
+                <a href="https://www.ginoseast.com" target="_blank">https://www.ginoseast.com</a>
+                <figure><img src="images/gino-east-logo.png" alt="Business Logo" width="300px"></figure>
+            </div>
         </div>
 
         <!-- Call to join the chamber of commerce -->
         <div class="calltojoin">
-            <!-- description of the purpose of the chamber and its goals -->
-
-        </div>
-
-        <!-- Contact information -->
-        <div class="contacWrapper">
-            <div class="contactinfo">
-                
-            </div>
-            <div class="map">
-
-            </div>
+            <button id="calltojoin" type="button">Join the Chamber of Commerce Today!</button>
         </div>
 
         <!-- current weather information (current temp, condition, humidity) -->
@@ -148,7 +161,35 @@
         </div>
 
         <!-- three day forcast -->
-        <div id="currentWeather"></div>
+        <div id="currentWeather"></div>        
+        
+        <!-- Contact information -->
+        <div class="contacWrapper">
+            <div class="physical">
+                <h2>Address:</h2>
+                <p>Lake Geneva Chamber of Commerce</p>
+                <p>321 Main St. Hwy 50</p>
+                <p>Lake Geneva, WI, 53147</p>
+                <h2>Business Hours:</h2>
+                <p>Mon-Fri</p>
+                <p>9:00AM - 5:00PM</p>
+            </div>
+            <div class="electronic">
+                <h2>Phone:</h2>
+                <p>(262)244-4442</p>
+                <h2>Email:</h2>
+                <p>contact-us@genevacoc.com</p>
+                <div class="social">
+                    <h2>Socail Media</h2>
+                    <a href=""><img src="images/facebook.png" alt="Facebook Logo"></a>
+                    <a href=""><img src="images/reddit.png" alt="Reddit Logo"></a>
+                    <a href=""><img src="images/pintrest.png" alt="Pintrest Logo"></a>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8307.937972352016!2d-88.42718404187069!3d42.591385762414966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1626729375338!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
 
     </main>
     <!-- FOOTER -->
