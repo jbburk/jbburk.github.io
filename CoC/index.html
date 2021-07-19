@@ -115,8 +115,13 @@
         </div>
 
         <!-- Contact information -->
-        <div class="contact">
+        <div class="contacWrapper">
+            <div class="contactinfo">
+                
+            </div>
+            <div class="map">
 
+            </div>
         </div>
 
         <!-- current weather information (current temp, condition, humidity) -->
@@ -125,14 +130,25 @@
         </div>
 
         <!-- weather alerts if available -->
-        <div class="message" id="alert">
+        <div class="alert-modal" id="alertModal">
 
+            <!-- Content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 id="alert-event">Weather Alert</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="alert-sender">Alert Sender</p>
+                    <p id="alert-description">Alert Description</p>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
         </div>
 
         <!-- three day forcast -->
-        <div class="3day">
-
-        </div>
+        <div id="currentWeather"></div>
 
     </main>
     <!-- FOOTER -->
@@ -143,8 +159,8 @@
     </div>
     <!-- JAVASCRIPT -->
     <script src="js/main.js"></script>
-    <script src="js/images.js"></script>
-    <script src="js/test.js"></script>
+    <script src="js/imagehandling.js"></script>
+    <script src="js/weatherapi.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
         WebFont.load({

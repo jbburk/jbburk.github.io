@@ -15,43 +15,88 @@ fetch(onecallURL)
     console.log(data);
     // 3-DAY WEATHER FORCAST    
     for (let i = 0; i < 3; i++){
-        // Constants for each item
-        const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const forecast = data.daily;
-        // console.log(forecast);
-        let d = new Date(forecast[i].dt * 1000);
-        let desc = forecast[i].weather[0].description;
-        let iconcode = forecast[i].weather[0].icon;
-        let icon_path = `//openweathermap.org/img/wn/${iconcode}.png`;
-        let daytemp = forecast[i].temp.day;
+      // Constants for each item
+      const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const forecast = data.daily;
+      // console.log(forecast);
+      let d = new Date(forecast[i].dt * 1000);
+      let desc = forecast[i].weather[0].description;
+      let iconcode = forecast[i].weather[0].icon;
+      let icon_path = `//openweathermap.org/img/wn/${iconcode}.png`;
+      let daytemp = forecast[i].temp.day;
 
-        // Define each item
-        let box = document.createElement('section');
-        let card = document.createElement('div');
-        let name = document.createElement('h2');
-        let icon = document.createElement('img');
-        let temp = document.createElement('p');
+      // Define each item
+      let box = document.createElement('section');
+      let card = document.createElement('div');
+      let name = document.createElement('h2');
+      let icon = document.createElement('img');
+      let temp = document.createElement('p');
+      let humidity = document.createElement('p');
+      let description = document.createElement('p');
 
-        // Match constants to items
-        name.textContent = dayofWeek[d.getDay()];
-        icon.setAttribute('src', icon_path);
-        icon.setAttribute('alt', desc);
-        temp.textContent = Math.round(daytemp);
+      // Match constants to items
+      name.textContent = dayofWeek[d.getDay()];
+      icon.setAttribute('src', icon_path);
+      icon.setAttribute('alt', desc);
+      temp.textContent = Math.round(daytemp);
 
-        // Compile boxes together
-        card.appendChild(name);
-        card.appendChild(icon);
-        card.appendChild(temp);
-        box.appendChild(card);
-        document.getElementById('weatherWrapper').appendChild(box);
-    };
-
+      // Compile boxes together
+      card.appendChild(name);
+      card.appendChild(icon);
+      card.appendChild(temp);
+      
+      document.getElementById('weatherWrapper').appendChild(card);
+    }
     // CURRENT WEATHER CONDITIONS
-    const current = data.current;
-    
+    for (let i = 0; i < 1; i++){
+      let card = document.createElement('div');
+      let name = document.createElement('h2');
+      let temp = document.createElement('p');
+      let humidity = document.createElement('p');
+      let description = document.createElement('p');
 
+      const currentweather = data.current;
+      // Need current temp, condition description, and humidity
+      let currenttemp = currentweather.temp;
+      let currentcondition = currentweather.weather[0].description;
+      let currenthumidity = currentweather.humidity;
+
+      name.textContent = "Current Weather";
+      humidity.textContent = `Humidity: ${currenthumidity}`;
+      temp.textContent = `Current Temperature: ${currenttemp}`;
+      description.textContent = `Description: ${currentcondition}`;
+
+      card.appendChild(name);
+      card.appendChild(temp);
+      card.appendChild(humidity);
+      card.appendChild(description);
+
+      document.getElementById('currentWeather').appendChild(card);
+    };
     // WEATHER ALERTS!!!
+    if (typeof data.alerts !== 'undefined') {
+      // FILL IN ALERT WITH DATA
+      const alert = data.alerts;
+      document.getElementById('alert-event').textContent = alert.event;
+      document.getElementById('alert-sender').textContent = alert.sender_name;
+      document.getElementById('alert-description').textContent = alert.description;
 
-    const alert = data.alerts;
-
+      // QUE ALERT TO POP-UP IMMEDIEATLY
+      let modal = document.getElementById("alertModal");
+      let span = document.getElementsByClassName("close")[0];
+      // If there is an alert, open the modal
+      if (typeof alert !== 'undefined') {
+        modal.style.display = "block";
+      }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      } 
+    }
   });

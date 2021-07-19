@@ -8,62 +8,105 @@ var part = "minutely,hourly";
 const APPID = "489ff7b5249aae895e1644595f955153";
 const onecallURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${APPID}&units=imperial`;
 
-//Fetch request for Three Day Weather Forcast
+//Fetch request
 fetch(onecallURL)
   .then((response) => response.json())
-  .then((weatherinfo) => {
-    // console.log(weatherinfo);
-    let Day = 0;
-    const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const threeDayForecast = weatherinfo.daily;
-    console.log(threeDayForecast)
+  .then((data) => {    
+    // console.log(data);
+    // 3-DAY WEATHER FORCAST    
+    if (typeof data.daily !== 'undefined') {
+      for (let i = 0; i < 3; i++){
+        // Constants for each item
+        const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const forecast = data.daily;
+        // console.log(forecast);
+        let d = new Date(forecast[i].dt * 1000);
+        let desc = forecast[i].weather[0].description;
+        let iconcode = forecast[i].weather[0].icon;
+        let icon_path = `//openweathermap.org/img/wn/${iconcode}.png`;
+        let daytemp = forecast[i].temp.day;
 
-    threeDayForecast.slice(0, 3).forEach( x => {
-        let d = new Date(x.dt);
-        console.log(d);
-        const desc = x.weather[0].description;
-        const iconcode = x.weather[0].icon;
-        const icon_path = `//openweathermap.org/img/wn/${iconcode}.png`;
-        document.getElementById(`dayofweek${Day+1}`).textContent = dayofWeek[d.getDay()];
-        document.getElementById(`icon${Day+1}`).src = icon_path;
-        document.getElementById(`icon${Day+1}`).setAttribute('alt', desc)
-        document.getElementById(`forecast${Day+1}`).textContent = Math.round(x.temp.day);
-        Day++;
-    });
+        // Define each item
+        let box = document.createElement('section');
+        let card = document.createElement('div');
+        let name = document.createElement('h2');
+        let icon = document.createElement('img');
+        let temp = document.createElement('p');
+        let humidity = document.createElement('p');
+        let description = document.createElement('p');
+
+        // Match constants to items
+        name.textContent = dayofWeek[d.getDay()];
+        icon.setAttribute('src', icon_path);
+        icon.setAttribute('alt', desc);
+        temp.textContent = Math.round(daytemp);
+
+        // Compile boxes together
+        card.appendChild(name);
+        card.appendChild(icon);
+        card.appendChild(temp);
+        
+        document.getElementById('weatherWrapper').appendChild(card);
+      }
+    } else {
+      console.log("Error: Data for Weather Forecast is undefined")
+    }
+    // CURRENT WEATHER CONDITIONS
+    if (typeof data.current !== 'undefined'){
+      let card = document.createElement('div');
+      let name = document.createElement('h2');
+      let temp = document.createElement('p');
+      let humidity = document.createElement('p');
+      let description = document.createElement('p');
+
+      const currentweather = data.current;
+      // Need current temp, condition description, and humidity
+      let currenttemp = currentweather.temp;
+      let currentcondition = currentweather.weather[0].description;
+      let currenthumidity = currentweather.humidity;
+
+      name.textContent = "Current Weather";
+      humidity.textContent = `Humidity: ${currenthumidity}`;
+      temp.textContent = `Current Temperature: ${currenttemp}`;
+      description.textContent = `Description: ${currentcondition}`;
+
+      card.appendChild(name);
+      card.appendChild(temp);
+      card.appendChild(humidity);
+      card.appendChild(description);
+
+      document.getElementById('currentWeather').appendChild(card);
+    }
+    else {
+      console.log("Error: Data for Current Weather Conditions are undefined")
+    }
+    // WEATHER ALERTS!!!
+    if (typeof data.alerts !== 'undefined') {
+      // FILL IN ALERT WITH DATA
+      const alert = data.alerts;
+      document.getElementById('alert-event').textContent = alert.event;
+      document.getElementById('alert-sender').textContent = alert.sender_name;
+      document.getElementById('alert-description').textContent = alert.description;
+
+      // QUE ALERT TO POP-UP IMMEDIEATLY
+      let modal = document.getElementById("alertModal");
+      let span = document.getElementsByClassName("close")[0];
+      // If there is an alert, open the modal
+      if (typeof alert !== 'undefined') {
+        modal.style.display = "block";
+      }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      } 
+    }
+    else {
+      console.log("There are no active weather alerts for this area")
+    }
   });
-
-// //Fetch request for Current Weather
-// fetch(onecallURL)
-//   .then((response) => response.json())
-//   .then((weatherinfo) => {
-//     console.log(weatherinfo);
-//     let day = 0;
-//     const dayofWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-//     // reduce the list array to the five forecasts
-//     const fiveDayForecast = weatherinfo.list.filter( forecast => forecast.dt_txt.includes('18:00:00'));
-//    //  console.log(fiveDayForecast)
-
-//     fiveDayForecast.forEach( x => {
-//         let d = new Date(x.dt_txt);
-//       //   console.log(d);
-//         const desc = x.weather[0].description;
-//         const iconcode = x.weather[0].icon;
-//         const icon_path = `//openweathermap.org/img/wn/${iconcode}.png`;
-//         document.getElementById(`dayofweek${day+1}`).textContent = dayofWeek[d.getDay()];
-//         document.getElementById(`icon${day+1}`).src = icon_path;
-//         document.getElementById(`icon${day+1}`).setAttribute('alt', desc)
-//         document.getElementById(`forecast${day+1}`).textContent = Math.round(x.main.temp);
-//         day++
-//     });
-// });
-
-// //Fetch request for Weather Alerts
-// fetch(onecallURL)
-//   .then((response) => response.json())
-//   .then((weatherinfo) => {
-//    //  console.log(weatherinfo);
-//     document.getElementById('currentstate').innerHTML = weatherinfo.weather[0].main;
-//     document.getElementById('currentTemp').innerHTML = Math.round(weatherinfo.main.temp);
-//     document.getElementById('humidity').innerHTML = weatherinfo.main.humidity;
-//     document.getElementById('windSpeed').innerHTML = Math.round(weatherinfo.wind.speed);
-//  });
