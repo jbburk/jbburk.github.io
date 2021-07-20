@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is the Home Page for the Lake Geneva Chamber of Commerce" />
+    <meta name="author" content="Joshua Burk" />
+
+    <title>Home: Lake Geneva Chamber of Commerce</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- STYLE SHEETS -->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <img src="images/logo.png" alt="Chamber of Commerce Logo" />
+            <div class="headings">
+                <h1>Lake Geneva</h1>
+                <h2>Chamber of Commerce</h2>
+            </div>
+        </header>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div id="navWrapper">
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+            <ul id="primarynav" class="hide">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="city.html">Lake Geneva</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- CONTENT -->
+    <main>
+        <h1>Attribution Page</h1>
+        <h3>Content</h3>
+        <p>History of Lake Geneva - <a href="https://www.cityoflakegeneva.com/index.asp?SEC=7DF9F2BC-F459-4EE8-AB8C-3BA9DCAFDD69&Type=B_BASIC" target="_new">City of Lake Geneva Website</a></p>
+        <p>Demographics of Lake Geneva - <a href="https://data.census.gov/cedsci/profile?q=Lake%20Geneva%20city,%20Wisconsin&g=1600000US5541450&tid=ACSDP5Y2018.DP05" target="_new">Census</a></p>
+        <h3>Images</h3>
+        <p>Webpage Logo - Iconfinder</p>
+        <p>Favicon - Iconfinder</p>
+        <p>Gallery Images - visitlakegeneva.com</p>
+
+        <h3>Interactive Map</h3>
+        <p>Interactive Map - Google Maps Embedded Map</p>
+
+        <h3>Weather Information</h3>
+        <p>Open Weather Map - <a href="https://openweathermap.org">https://openweathermap.org</a></p>
+        
+    </main>
+    <!-- FOOTER -->
+    <div id="footerWrapper">
+        <footer>
+            &copy;<span id="year"></span> Joshua Burk 
+            <br><a href="attribution.html">Attribution Page</a> 
+            <br><span id="date"></span>
+        </footer>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+    <script src="js/imagehandling.js"></script>
+    <script src="js/weatherapi.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ["Open Sans", "Montserrat"],
+            },
+        });
+    </script>
+</body>
+
+</html>

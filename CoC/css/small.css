@@ -1,10 +1,12 @@
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 
 /*----------- apply a natural box layout model to all elements --------------*/
+
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -12,6 +14,7 @@ html {
 }
 
 /*----------- Slideshow Container --------------------------------------------*/
+
 .slideshow-container {
     width: 100%;
     position: relative;
@@ -85,9 +88,11 @@ html {
   }
 
 /*----------- BODY ----------------------------------------------------------*/
+
 body {
   font-size: 1rem;
   font-family: 'Monsterrat', Verdana, sans-serif ;
+  background-color: #edf6f9;
 }
 
 h1, h2, h3 {
@@ -104,6 +109,7 @@ Header, Footer, Nav: #83c5be
 */
 
 /*----------- HEADER --------------------------------------------------------*/
+
 #headerWrapper {
   background-color: #83c5be;
 }
@@ -113,7 +119,7 @@ header {
   background-color: #83c5be;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 header img {
@@ -138,6 +144,7 @@ header h2 {
 }
 
 /*----------- NAVIGATION ----------------------------------------------------*/
+
 div#navWrapper {
   background-color: #83c5be;
 }
@@ -170,6 +177,7 @@ nav ul li a {
   padding: .8rem 2%;
   text-decoration: none;
   text-align: center;
+  border-top: 1px solid #edf6f9;
 }
 
 nav ul li a:hover {
@@ -178,11 +186,13 @@ nav ul li a:hover {
 }
 
 nav ul li.active a {
-  background-color: #e29578;
+  background-color: #edf6f9;
   color: black;
   border: none;
 }
+
 /*----------- MAIN ----------------------------------------------------------*/
+
 main {
   padding: 0 2%;
   min-height: 10rem;
@@ -203,6 +213,10 @@ div.hideme {
   width: 100%;
   height: auto;
   /* border: 1px dashed red; */
+}
+
+.herodiv img {
+  width: 100%;
 }
 
 .article {
@@ -227,6 +241,8 @@ div.hideme {
   padding: 1rem;
   margin: 1rem auto;
   text-align: center;
+  box-shadow: 0 0 30px grey;
+  border-radius: 2rem;
 }
 
 .advertWrapper {
@@ -247,6 +263,7 @@ div.hideme {
 }
 
 .calltojoin {
+  width:100%;
   margin: 1rem auto;
   text-align: center;
 }
@@ -257,10 +274,12 @@ div.hideme {
   background-color: #006d77;
   color: white;
   border-radius: 2rem;
+  font-size: 2rem;
 }
 
 .weatherWrapper {
-  margin: 1rem 0;
+  width:100%;
+  margin: 1rem auto;
 }
 
 .weatherWrapper div {
@@ -270,10 +289,7 @@ div.hideme {
   text-align: center;
   background-color: #83c5be;
   box-shadow: 0 0 30px grey;
-}
-
-.weatherWrapper div img {
-  width: 50%;
+  border-radius: 2rem;
 }
 
 .currentWeather {
@@ -283,9 +299,66 @@ div.hideme {
   padding: 1rem;
   margin: 1rem auto;
   text-align: center;
+  box-shadow: 0 0 30px grey;
+  border-radius: 2rem;
 }
 
+.contactWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 10px;
+  margin: .5rem 0;
+  padding: 1rem 2%;
+  font-size: .8rem;
+}
+
+.physical {
+  margin-left: 1rem;
+  grid-column: 1;
+  justify-self: stretch;
+}
+
+.electronic {
+  margin-left: 1rem;
+  grid-column: 2;
+  justify-self: stretch;
+}
+
+.social {
+  display: flex;
+}
+
+.social a {
+  padding: 0 5px
+}
+
+.map {
+  width: 100%;
+  grid-column: span 2;
+  text-align: center;
+}
+
+.map iframe {
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+}
+
+/*---------- City Page Main -------------------------------------------------*/
+
+.city-info {
+  width: 100%;
+}
+
+.city-map img {
+  width: 100%;
+}
+
+
+
 /*----------- The Modal (background) ----------------------------------------*/
+
 .alert-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -350,12 +423,90 @@ div.hideme {
   cursor: pointer;
 } 
 
-
-
-
 /* ----------- FORM -------------------------------------------------------- */
+form fieldset {
+  width: 100%;
+  margin: 2rem 0;
+  border: 2px solid #e29578;
+  border-radius: 10px;
+  padding: .5rem 2%;
+  background-color: #ffddd2;
+}
+
+form legend {
+  color: black;
+  margin: 0 1rem;
+  padding: 0 .5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+form label.top,
+form div, 
+form label.radio {
+  display: block;
+  padding-top: 1rem;
+  color: black;
+  font-size: 1rem;
+}
+
+form label.top input,
+form label.top select {
+  -webkit-appearance: none;
+  display: block;
+  font-size: 1rem;
+  border: solid 1px #e29578;
+  padding: .75rem;
+  color: #333;
+  width: 100%;
+  max-width: 20rem;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+form label.sbs {
+  display: block;
+  padding: 0.75rem;
+  color: #333;
+}
+
+.flexly {
+  display: flex;
+  align-items: center;
+  padding: .75rem;
+  margin: 0 0 2rem 2%;
+}
+
+form textarea {
+  width: 75%;
+}
+
+form input.submit8tn {
+  border: 2px solid #e29578;
+  background-color: #ffddd2;
+  color: black;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: .75rem 1.5rem;
+  margin: 0 0 2rem 2%;
+  width: 96%;
+  max-width: 20rem;
+}
+
+form label.top input:required {
+  border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+  border-left: green solid 6px;
+}
+
+form .perks {
+  font-size: 1rem;
+
+}
 
 /*----------- FOOTER --------------------------------------------------------*/
+
 #footerWrapper {
   background-color: #83c5be;
 }
@@ -365,7 +516,9 @@ footer {
   padding: .5rem 2%;
   text-align: center;
 }
+
 /*----------- Clearfix: Force an Element not to collapse --------------------*/
+
 .clearfix:after {
     content: "";
     display: table;

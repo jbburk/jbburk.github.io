@@ -29,7 +29,7 @@ fetch(onecallURL)
         // Define each item
         let box = document.createElement('section');
         let card = document.createElement('div');
-        let name = document.createElement('h2');
+        let name = document.createElement('h3');
         let icon = document.createElement('img');
         let temp = document.createElement('p');
         let humidity = document.createElement('p');
@@ -58,6 +58,7 @@ fetch(onecallURL)
       let temp = document.createElement('p');
       let humidity = document.createElement('p');
       let description = document.createElement('p');
+      let hr = document.createElement('hr');
 
       const currentweather = data.current;
       // Need current temp, condition description, and humidity
@@ -71,6 +72,7 @@ fetch(onecallURL)
       description.textContent = `Description: ${currentcondition}`;
 
       card.appendChild(name);
+      card.appendChild(hr);
       card.appendChild(temp);
       card.appendChild(humidity);
       card.appendChild(description);
@@ -84,6 +86,7 @@ fetch(onecallURL)
     if (typeof data.alerts !== 'undefined') {
       // FILL IN ALERT WITH DATA
       const alert = data.alerts;
+      console.log(alert);
       document.getElementById('alert-event').textContent = alert.event;
       document.getElementById('alert-sender').textContent = alert.sender_name;
       document.getElementById('alert-description').textContent = alert.description;

@@ -8,9 +8,10 @@ function toggleMenu() {
 }
 
 // Button click
-document.getElementById("calltojoin").onclick = function () {
-  location.href = "https://jbburk.github.io/CoC/join.html"
-}
+if (document.getElementById('calltojoin') !== null) {
+  document.getElementById("calltojoin").onclick = function () {
+    location.href = "join.html"
+}}
 
 // displays message on Fridays
 // if (new Date().getDay() == 5){
