@@ -39,7 +39,7 @@ fetch(onecallURL)
         name.textContent = dayofWeek[d.getDay()];
         icon.setAttribute('src', icon_path);
         icon.setAttribute('alt', desc);
-        temp.textContent = Math.round(daytemp);
+        temp.textContent = `${Math.round(daytemp)}\u00B0F`;
 
         // Compile boxes together
         card.appendChild(name);
@@ -66,8 +66,8 @@ fetch(onecallURL)
       let currenthumidity = currentweather.humidity;
 
       name.textContent = "Current Weather";
-      humidity.textContent = `Humidity: ${currenthumidity}`;
-      temp.textContent = `Current Temperature: ${currenttemp}`;
+      humidity.textContent = `Humidity: ${currenthumidity}%`;
+      temp.textContent = `Current Temperature: ${currenttemp}\u00B0F`;
       description.textContent = `Description: ${currentcondition}`;
 
       card.appendChild(name);
