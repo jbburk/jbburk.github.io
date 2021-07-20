@@ -105,15 +105,143 @@ html {
   }
 
 /*----------- BODY ----------------------------------------------------------*/
+body {
+  font-size: 1rem;
+  font-family: 'Monsterrat', Verdana, sans-serif ;
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* 
+Colors:
+Navigation Active: #006d77
+Header, Footer, Nav: #83c5be
+#edf6f9
+#ffddd2
+#e29578 
+*/
 
 /*----------- HEADER --------------------------------------------------------*/
+#headerWrapper {
+  background-color: #83c5be;
+}
+
+header {
+  padding: .5rem 2%;
+  background-color: #83c5be;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  margin-right: 10px;
+  width: 50px;
+}
+
+div.headings {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+header h2 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 1rem;
+}
 
 /*----------- NAVIGATION ----------------------------------------------------*/
+div#navWrapper {
+  background-color: #83c5be;
+}
 
+nav {
+  background-color: #83c5be;
+}
+
+nav button {
+  margin: .2rem 2%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: black;
+}
+
+nav ul.hide {
+  display: none;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: black;
+  padding: .8rem 2%;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  background-color: blue;
+  color: white;
+}
+
+nav ul li.active a {
+  background-color: #006d77;
+  color: white;
+  border: none;
+  font-weight: 700;
+}
 /*----------- MAIN ----------------------------------------------------------*/
+main {
+  padding: 0 2%;
+  min-height: 10rem;
+  display: grid;
+}
+
+div.showme {
+  display: block;
+}
+
+div.hideme {
+  display: none;
+}
+
+.herodiv {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: auto;
+  /* border: 1px dashed red; */
+}
+
+.article {
+  margin: 1rem 0;
+  border: 1px solid #e29578;
+  padding: 1rem;
+  background-color: #ffddd2;
+  border-radius: 1rem;
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+}
 
 /*----------- The Modal (background) ----------------------------------------*/
- .alert-modal {
+.alert-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -126,8 +254,8 @@ html {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
- /* Modal Header */
- .modal-header {
+/* Modal Header */
+.modal-header {
   padding: 2px 16px;
   background-color: #5cb85c;
   color: white;
