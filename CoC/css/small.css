@@ -345,7 +345,7 @@ div.hideme {
   height: 200px;
 }
 
-/*---------- City Page Main -------------------------------------------------*/
+/*----------- City Page Main ------------------------------------------------*/
 
 .city-info {
   width: 100%;
@@ -355,7 +355,53 @@ div.hideme {
   width: 100%;
 }
 
+/*----------- Directory Page Main -------------------------------------------*/
 
+.directoryWrapper {
+  width: 100%;
+  text-align: center;
+  margin:auto;
+  display: grid;
+  grid-template-rows: repeat(9, auto);
+}
+
+.directoryWrapper div {
+  margin: 1rem auto;
+}
+
+.directoryWrapper div a{
+  color:black;
+}
+
+.directoryWrapper div a:hover{
+  color:blue;
+}
+
+.directoryWrapper div img {
+  margin: 1rem auto;
+  width:100%;
+}
+/*----------- Contact Us Page Main ------------------------------------------*/
+.directorboard {
+  width:100%;
+  text-align: center;
+  margin: auto;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.BoD {
+  margin: 1rem auto;
+  background-color: #83c5be;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.BoD img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #333;
+}
 
 /*----------- The Modal (background) ----------------------------------------*/
 

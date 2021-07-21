@@ -26,10 +26,6 @@
 
 <body>
     <!-- HEADER -->
-    <div id="message" class="">
-        Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city
-        park pavilion.
-    </div>
     <div id="headerWrapper">
         <header class="clearfix">
             <img src="images/logo.png" alt="Chamber of Commerce Logo" />
@@ -58,9 +54,106 @@
     <!-- CONTENT -->
     <main> 
         <!-- Contact information -->
-        <div class="contact">
-
+        <h1>Contact Us</h1>
+        <div class="contactWrapper">
+            <div class="physical">
+                <h3>Address:</h2>
+                <p>Lake Geneva Chamber of Commerce<br>
+                626 Geneva Street<br>Lake Geneva, WI, 53147</p>
+                <h3>Business Hours:</h2>
+                <p>Mon-Fri:<br>9:00AM - 5:00PM</p>
+                
+            </div>
+            <div class="electronic">
+                <h3>Phone:</h2>
+                <p>(262)244-4442</p>
+                <h3>Email:</h2>
+                <p>contact-us@genevacoc.com</p>
+                <h3>Social Media</h2>
+                <div class="social">
+                    <a href=""><img src="images/fb-logo.png" alt="Facebook Logo" width="32px"></a>
+                    <a href=""><img src="images/reddit-logo.png" alt="Reddit Logo" width="32px"></a>
+                    <a href=""><img src="images/pintrest-logo.png" alt="Pintrest Logo" width="32px"></a>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8307.937972352016!2d-88.42718404187069!3d42.591385762414966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1626729375338!5m2!1sen!2sus" 
+                width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
+        <h1>Board of Directors</h1>
+        <div class="directorboard">
+            <figure class="BoD">
+                <h3>Executive Director</h3>
+                <img src="images/christina-lawson.jpg" alt="">
+                <figcaption>Christina Lawson</figcaption>
+            </figure>
+            <figure class="BoD">
+                <h3>Internal Services Director</h3>
+                <img src="images/logan-peel.jpg" alt="">
+                <figcaption>Logan Peel</figcaption>
+            </figure>
+            <figure class="BoD">
+                <h3>Finance Director</h3>
+                <img src="images/enrique-sandoval.jpg" alt="">
+                <figcaption>Enrique Sandoval</figcaption>
+            </figure>
+            <figure class="BoD">
+                <h3>Communications Director</h3>
+                <img src="images/lance-chen.jpg" alt="">
+                <figcaption>Lance Chen</figcaption>
+            </figure>
+            <figure class="BoD">
+                <h3>Membership Director</h3>
+                <img src="images/shani-beaumont.jpg" alt="">
+                <figcaption>Shani Beaumont</figcaption>
+            </figure>
+        </div>
+        <div class="contact-form">
+            <form method="get" action="contact-thanks.html">
+                <fieldset>
+                  <label class="top"
+                    >Full Name* <input
+                      type="text"
+                      name="fullname"
+                      required
+                      minlength="3"
+                      pattern="[A-Za-z ]{3,}"
+                  /></label>
+                  <label class="top"
+                    >Email* <input
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="someone@gmail.com"
+                  /></label>
+                  <label class="top"
+                    >Phone <input
+                      type="tel"
+                      name="phone"
+                      placeholder="1235551234"
+                  /></label>
+                  <label class="top"
+                    >Nature of Comment 
+                    <select name="subject">
+                        <option value="" disabled="">Select Response &#9662</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="compliment">Compliment</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="other">Other</option>
+                    </select>
+                  </label>
+                  <div>Comment</div>
+                  <label class="top">
+                    <textarea name="addtext" rows="4"></textarea>
+                  </label>
+                </fieldset>               
+                  <br/>
+                  <input type="submit" value="Submit" class="submit8tn" />
+              </form>
+        </div>
+        
+        
         
         
 
@@ -75,8 +168,6 @@
     </div>
     <!-- JAVASCRIPT -->
     <script src="js/main.js"></script>
-    <script src="js/imagehandling.js"></script>
-    <script src="js/weatherapi.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
         WebFont.load({

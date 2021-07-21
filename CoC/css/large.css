@@ -10,20 +10,14 @@ body {
 /*----------- NAVIGATION ----------------------------------------------------*/
 
 /*----------- MAIN ----------------------------------------------------------*/
-.herodiv {
-    width: 70%
+main {
+    width:70%;
+    margin: auto;
 }
 
-.article {
-    width: 70%;
-}
-
-.advertWrapper {
-    width: 70%;
-}
 
 .weatherWrapper {
-    width: 70%;
+    
     font-size: 1rem;
 }
 
@@ -36,7 +30,6 @@ body {
 }
 
 .city-info {
-    width: 70%;
     justify-self: center;
 }
 
@@ -59,10 +52,30 @@ body {
     grid-row: 3;
 }
 
+/*----------- Directory Page Main -------------------------------------------*/
+.directoryWrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/*----------- Contact Us Page Main ------------------------------------------*/
+.contactWrapper {
+    margin: auto;
+}
+
+.contact-form {
+    width: 100%;
+    margin: auto;
+}
+
+.directorboard {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
 /* ----------- FORM -------------------------------------------------------- */
 .join-form {
+    width:100%;
     justify-self: center;
-    width: 70%;
+    
 }
 
 

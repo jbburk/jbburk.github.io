@@ -1,0 +1,56 @@
+[
+	{
+		"business":"Grand Geneva Resort & Spa",
+		"logo":"grand-geneva-logo.png",
+		"phone":"(262) 248-8811",
+		"url":"https://www.grandgeneva.com"
+	},
+	{
+		"business":"Next Door Pub & Pizzeria",
+		"logo":"pub-logo.png",
+		"phone":"(262) 248-9551",
+		"url":"https://www.nextdoorpub.com"
+	},
+	{
+		"business":"Melges Car Wash",
+		"logo":"car-wash-logo.png",
+		"phone":"(262) 249-9274",
+		"url":"https://melgescarwash.com"
+	},
+	{
+		"business":"Popeye's",
+		"logo":"popeyes-logo.png",
+		"phone":"(262) 248-4381",
+		"url":"https://www.popeyeslkg.com"
+	},
+	{
+		"business":"Timber Ridge Lodge & Waterpark",
+		"logo":"trl-logo.png",
+		"phone":"(262) 249-3400",
+		"url":"https://www.timberridgelodge.com"
+	},
+	{
+		"business":"Egg Harbor Cafe",
+		"logo":"ehc-logo.png",
+		"phone":"(262) 248-1207",
+		"url":"https://eggharborcafe.com"
+	},
+	{
+		"business":"Geneva Lake Museum",
+		"logo":"glm-logo.png",
+		"phone":"(262) 248-6060",
+		"url":"http://www.genevalakemuseum.org/"
+	},
+	{
+		"business":"Kilwins",
+		"logo":"kilwins-logo.jpg",
+		"phone":"262-248-4400",
+		"url":"https://www.kilwins.com/"
+	},
+	{
+		"business":"Emagine Geneva Lakes",
+		"logo":"emagine-logo.png",
+		"phone":"(262) 475-2300",
+		"url":"https://www.emagine-entertainment.com/theatres/emagine-geneva-lakes/"
+	}
+]

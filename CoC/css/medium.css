@@ -142,7 +142,23 @@ nav ul.hide {
 .city-map img {
     max-width: 425px;
 }
+/*----------- Directory Page Main -------------------------------------------*/
+.directoryWrapper {
+    width:90%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    align-items: center;
+}
 
+/*----------- Contact Us Page Main ------------------------------------------*/
+.directorboard {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+}
+.BoD {
+    width: 100%;
+}
 /*------------ FORM ---------------------------------------------------------*/
 
 /*----------- FOOTER --------------------------------------------------------*/
